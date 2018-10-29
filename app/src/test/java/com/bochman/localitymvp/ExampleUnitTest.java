@@ -1,4 +1,4 @@
-package bochman.com.localitymvp;
+package com.bochman.localitymvp;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package bochman.com.localitymvp;
+package com.bochman.localitymvp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("bochman.com.localitymvp", appContext.getPackageName());
+        assertEquals("com.bochman.localitymvp", appContext.getPackageName());
     }
 }

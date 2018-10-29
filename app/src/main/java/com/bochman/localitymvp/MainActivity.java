@@ -1,4 +1,4 @@
-package bochman.com.localitymvp;
+package com.bochman.localitymvp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
