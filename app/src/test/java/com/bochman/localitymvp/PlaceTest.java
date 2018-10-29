@@ -6,7 +6,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.InputStream;
+
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class PlaceTest {
@@ -41,9 +44,22 @@ public class PlaceTest {
 
     @Test
     public void toStringTest() {
+        assertThat(tlv.toString(),notNullValue());
         assertThat(tlv.toString(), is(name));
     }
 
+    @Test
+    public void StreamBasedLoading_TLV() {
+        InputStream stream = PlaceTest.class.getResourceAsStream("/places/TelAviv.txt");
+        Place place = Place.fromStream(stream);
+        assertThat(place,notNullValue());
+        assertThat(id, is(tlv.getId()));
+        assertThat(lat, is(tlv.getLat()));
+        assertThat(lng, is(tlv.getLng()));
+        assertThat(icon, is(tlv.getIcon()));
+        assertThat(address, is(tlv.getAddress()));
+        assertThat(name, is(tlv.getName()));
+    }
 
 
 }

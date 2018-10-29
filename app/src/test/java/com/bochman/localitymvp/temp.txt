@@ -1,0 +1,31 @@
+
+
+
+    @Test
+    public void StreamBasedLoading_SaronaMarket() {
+        InputStream stream = PlaceTest.class.getResourceAsStream("/places/SaronaMarket.txt");
+        Place place = Place.fromStream(stream);
+        assertNotNull(place);
+        assertEquals("ChIJu_9NFJ1LHRURqnCPWAarsj0", place.getId());
+        assertEquals(32.0714008, place.latitude, 0.001);
+        assertEquals(34.7869421, place.longitude, 0.001);
+        assertEquals("https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png", place.icon);
+        assertEquals("Aluf Kalman Magen St 3, Tel Aviv-Yafo", place.address);
+        assertEquals("Sarona Market", place.name);
+    }
+
+
+    @Test
+    public void fromContentValues() {
+        //todo: implement test
+    }
+
+    @Test
+    public void describeContents() {
+        // generated method - not tested.
+    }
+
+    @Test
+    public void writeToParcel() {
+        // generated method - not tested.
+    }
