@@ -23,3 +23,10 @@
 6 Search
     * using free text
     * using current location
+
+## Patterns
+
+
+## Special Features:
+
+* TDD style development
