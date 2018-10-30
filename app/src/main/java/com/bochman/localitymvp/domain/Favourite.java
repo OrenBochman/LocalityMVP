@@ -4,6 +4,7 @@ import org.parceler.Parcel;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
@@ -11,6 +12,7 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 @NoArgsConstructor
 public class Favourite extends Place {
 

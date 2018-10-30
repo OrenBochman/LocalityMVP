@@ -100,37 +100,37 @@ public class Place implements IPlace {
     @ColumnInfo(index = true, name = COL_ID)
     @PrimaryKey
     @NonNull
-    private String id;
+    String id;
 
     /**
      * The name of the place.
      */
     @ColumnInfo(name = COL_NAME)
-    private String name;
+    String name;
 
     /**
      * The  address of the place.
      */
     @ColumnInfo(name = COL_ADDRESS)
-    private String address;
+    String address;
 
     /**
      * The  latitude of the place.
      */
     @ColumnInfo(name = COL_LATITUDE)
-    private Double lat;
+    Double lat;
 
     /**
      * The  longitude of the place.
      */
     @ColumnInfo(name = COL_LONGITUDE)
-    private Double lng;
+    Double lng;
 
     /**
      * The icon of the place.
      */
     @ColumnInfo(name = COL_ICON)
-    private String icon;
+    String icon;
 
     /**
      * distance in meters from location
@@ -162,6 +162,11 @@ public class Place implements IPlace {
     public LatLng getLatLng() {
 
         return new LatLng(getLat(), getLng());
+    }
+
+    public String getLatLngString() {
+
+        return getLat()+","+ getLng();
     }
 
     /*
